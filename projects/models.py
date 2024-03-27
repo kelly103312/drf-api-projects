@@ -8,4 +8,4 @@ class Project(models.Model):
     description = models.TextField()
     techology =  models.CharField(max_length=200) 
     createdAt = models.DateTimeField(auto_now_add=True)
-    author = models.ForeignKey(Author, on_delete = SET_NULL, null=True, related_name="author")
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name="author")
